@@ -1,0 +1,34 @@
+<p style="color: green"><%= notice %></p>
+
+<div>
+  <%= link_to "Home", '/addresses/' %><br>
+  <%= link_to "Back to Categories", '/categories/' %>
+   <%= link_to "Logout", "/" %>
+</div>
+<h3><%= render @subcategory %></h3>
+
+<div>
+  <%= link_to "Sub Categories", subcategories_path %>
+</div>
+<h3><%= @product.name %> Products:</h3> 
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Price</th>
+    <th></th>
+    <th></th>
+  </tr>
+<% @product.each do |product| %>
+  <tr>
+    <td><%= product.name %></td>
+    <td><%= product.description %></td>
+    <td><%= product.price %></td>  
+    <td> <%= link_to "Show details", product %></td>
+    
+    
+  </tr>
+<% end %>
+</table>
+
+<%# <%= link_to 'New product', new_product_path %> 

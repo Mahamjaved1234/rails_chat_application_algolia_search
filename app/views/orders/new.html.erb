@@ -1,0 +1,20 @@
+<h3>New Order Placed</h3>
+<div>
+  <%= link_to "Home", '/addresses/' %><br>
+  <%= link_to "Back to Categories", '/categories/' %>
+</div>
+<br>
+<div>
+  <%# <%= link_to "Back to orders", orders_path %>  
+  <h3>Order Summary</h3>
+
+   <h4>User Name</h4>
+     <i><%= @un %></i>
+ <h4>Order Status</h4>
+     <i><%= @order.status %></i>
+    <h4>Grand Total</h4>
+    <i><%= @ogt %> PKR</i>
+</div>
+<br>
+<hr>
+

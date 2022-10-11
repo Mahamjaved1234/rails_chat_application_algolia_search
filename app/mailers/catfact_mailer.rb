@@ -1,0 +1,2 @@
+class CatfactMailer < ApplicationMailer
+end

@@ -1,0 +1,13 @@
+<h1>New address</h1>
+
+<%= render "form", address: @address %>
+
+<br>
+<form action="http://localhost:3000/api/v1/addresses/add_address.json?detail=detail&name=name" method="POST">
+<input type="textarea" name="detail" placeholder="detail" >
+      <input type="text" name="name" placeholder="name" >
+<input type="submit" name="submit" class="submit">
+   </form>
+<div>
+  <%= link_to "Back to addresses", addresses_path %>
+</div>

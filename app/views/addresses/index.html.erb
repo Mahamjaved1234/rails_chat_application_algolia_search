@@ -1,0 +1,38 @@
+<p style="color: green"><%= notice %></p>
+<h3>Select Address </h3> 
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+<% @addresses.each do |address| %>
+  <tr>
+    <td><%= address.name %></td>
+    <%# <td><%= address[1]</td> %> %>
+    <%# <td><%= address[2]</td> %> %>
+    <td><%= link_to 'Select', address_path(address) %></td>
+  </tr>
+<% end %>
+</table>
+<%= link_to "Add New Address", new_address_path %><br>
+<%= link_to "Add New Address_to_API", new_address_path %>
+<br />
+<hr>
+<h3> API CALLING SYSTEM </h3>
+<a href ='http://localhost:3000/api/v1/addresses/show_shopper_address'>Shopper Addresses</a></li>
+
+<% if Redis.current.get("shopper_addresses") == nil %>
+<p> No address found please add one </p>
+<% else %>
+<%# <% render Redis.current.get("shopper_adddresses")%> 
+<p> Address Found </p>
+<% end  %>
+<br>
+<h3>Select Address API</h3> 
+<form action="http://localhost:3000/api/v1//addresses/select_addr?name=name" method="POST">
+<input name="name" type="text">
+<input type="submit" name="submit" class="submit">
+   </form>
+<br />

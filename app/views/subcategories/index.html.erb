@@ -1,0 +1,30 @@
+<p style="color: green"><%= notice %></p>
+<div>
+  <%= link_to "Categories", categories_path %>
+</div>
+<h1>Subcategories</h1>
+
+<div id="subcategories">
+ <table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+  </tr>
+<% @subcategories.each do |subcategories| %>
+  <tr>
+    <td><%= subcategories.name %></td>
+    <td> <%= link_to "Show details", subcategories %></td>
+    
+    
+  </tr>
+<% end %>
+</table>
+</div>
+
+
+
+</table>
+<hr>
+
+<hr>

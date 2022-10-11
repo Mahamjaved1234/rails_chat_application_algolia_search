@@ -1,0 +1,53 @@
+<%# <%= link_to "New category", new_category_path  %>
+<div>
+  <%# <%= link_to "Select any other address", addresses_path %> 
+</div>
+<h3>Categories</h3> 
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+<% @categories.each do |category| %>
+  <tr>
+    <td><%= category.name %></td>
+    <td><%= link_to 'Select', category %></td>
+  </tr>
+<% end %>
+</table>
+<br />
+<hr>
+<h3>Pending Orders</h3> 
+<table>
+  <tr>
+    <th>Status</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+<% @ordersPending.each do |orderP| %>
+  <tr>
+    <td><%= orderP.status %></td>
+  </tr>
+<% end %>
+</table>
+<br />
+<hr>
+<h3>Completed Orders</h3> 
+<table>
+  <tr>
+    <th>Status</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+<% @ordersCompleted.each do |orderP| %>
+  <tr>
+    <td><%= orderP.status %></td>
+  </tr>
+<% end %>
+</table>
+<br />
+

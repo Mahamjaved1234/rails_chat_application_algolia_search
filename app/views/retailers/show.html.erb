@@ -1,0 +1,19 @@
+<p style="color: green"><%= notice %></p>
+
+
+<h2><%= @retailer.name %> categories:</h2> 
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+  </tr>
+<% @categories.each do |category| %>
+  <tr>
+    <td><%= category.name %></td>
+    <td><%= link_to "Select ", category %></td>
+    
+  </tr>
+<% end %>
+
+
+

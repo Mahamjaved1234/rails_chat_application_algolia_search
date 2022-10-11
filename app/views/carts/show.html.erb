@@ -1,0 +1,18 @@
+<p style="color: green"><%= notice %></p>
+
+<div>
+  <%# <%= link_to "Home", '/addresses/' %><br> 
+  <%= link_to "Back to Categories", '/categories/' %>
+</div>
+<h4><%= render @cart %></h4>
+
+<!--<div>
+  <%= link_to "Edit this cart", edit_cart_path(@cart) %> |
+  <%= link_to "Back to carts", carts_path %>
+</div> -->
+<h4>GRAND TOTAL: </h4>
+<%= @gt %>
+<h4>Products: </h4>
+<%= @cart.products %>
+
+<%= link_to "Place Order", new_order_path %>
