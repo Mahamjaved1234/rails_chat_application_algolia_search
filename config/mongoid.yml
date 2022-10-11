@@ -4,8 +4,7 @@ development:
     # Defines the default client. (required)
     default:
       # Mongoid can connect to a URI accepted by the driver:
-      # uri: mongodb://user:password@mongodb.domain.com:27017/eshop_development
-      # uri: mongodb://131231:123123123@localhosasdfasdfat:2asdfasdfaf7017/eshoasfasfsadp_development
+      # uri: mongodb://username:passWord@mongodb.domain.com:27017/project_name
 
 
       # Otherwise define the parameters separately.
